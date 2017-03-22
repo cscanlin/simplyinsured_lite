@@ -22,3 +22,5 @@ TODO:
 1. Put loading scripts in a command and optimize query for loading. Alternatively: fixtures
 
 2. Better relationships between the models. I ran out of time on this part, but defining the relationships on the models (instead of fetching by common attributes) would make this much better. Also, django has some nice tricks like `prefetch_related` to optimize queries on stuff like this.
+
+3. Fix fields on Plan model
