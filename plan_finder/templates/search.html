@@ -1,0 +1,16 @@
+<form action="/plan_finder/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+<ul>
+{% for result in results %}
+  <li>
+    <div>
+      <span>{{ result.carrier }} - {{ result.plan }} - {{ result.age }} - {{ result.monthly_premium }}</span>
+      <span>Deductible: {{result.get_plan.deductible}}</span>
+    </div>
+  </li>
+{% endfor %}
+</ul>
